@@ -1,0 +1,10 @@
+.idea
+.idea/*
+*.exe
+*.log
+note.txt
+.vscode
+out*
+out*/*
+_out
+_out/*

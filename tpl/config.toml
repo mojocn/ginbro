@@ -1,0 +1,28 @@
+[app]
+    name = "ginBro"
+    addr ="{{.AppListen}}" # eg1: www.mojotv.cn     eg:localhost:3333 eg1:127.0.0.1:88
+    secret = "{{.AppSecret}}"
+    env = "local" # only allows local/dev/test/prod
+    log_level = "error" # only allows debug info warn error fatal panic
+    enable_not_found = true # if true and static_path is not empty string, all not found route will serve static/index.html
+    enable_swagger = true
+    enable_cors = true  # true will case 403 error in swaggerUI  may cause api perform decrease
+    enable_sql_log = true # show gorm sql in terminal
+    enable_https = false # if addr is a domain enable_https will works
+    time_zone = "Asia/Shanghai"
+    api_prefix = "v1" #  api_prefix could be empty string,            the api uri will be api/v1/resource
+    static_path = "./static/"  # path must be an absolute path or relative to the go-build-executable file, may cause api perform decrease
+    mem_expire_min = 60 # memory cache expire in 60 minutes
+    mem_max_count = 1024000 # memory cache maxium store count
+    login_try = 100 # after 100 times login failure the IP will be ban for mem_expire_min(default 600min), wrong username costs 5 times, wrong password costs 1 time,
+    jwt_expire_hour = 24 # jwt expire in 24 hours
+[mysql]
+    addr = "{{.MysqlAddr}}"
+    user = "{{.MysqlUser}}"
+    password = "{{.MysqlPassword}}"
+    database = "{{.MysqlDatabase}}"
+    charset = "{{.MysqlCharset}}"
+[redis]
+    addr = "" # 127.0.0.1:6379 empty string will not init the redis db in models package
+    password = ""
+    db_idx = 0

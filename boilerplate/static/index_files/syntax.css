@@ -1,0 +1,330 @@
+/* Modified from: https://github.com/MozMorris/tomorrow-pygments/blob/master/css/tomorrow_night.css */
+.highlighter-rouge .highlight {
+    background-color: #1d1f21
+}
+
+.highlighter-rouge {
+    color: #c5c8c6;
+    margin: 0 auto 1em auto;
+    /*max-width: 56.25rem;*/
+}
+
+
+.highlighter-rouge .c {
+    color: #969896
+}
+
+/* Comment */
+.highlighter-rouge .err {
+    color: #cc6666
+}
+
+/* Error */
+.highlighter-rouge .k {
+    color: #b294bb
+}
+
+/* Keyword */
+.highlighter-rouge .l {
+    color: #de935f
+}
+
+/* Literal */
+.highlighter-rouge .n {
+    color: #c5c8c6
+}
+
+/* Name */
+.highlighter-rouge .o {
+    color: #8abeb7
+}
+
+/* Operator */
+.highlighter-rouge .p {
+    color: #c5c8c6
+}
+
+/* Punctuation */
+.highlighter-rouge .cm {
+    color: #969896
+}
+
+/* Comment.Multiline */
+.highlighter-rouge .cp {
+    color: #969896
+}
+
+/* Comment.Preproc */
+.highlighter-rouge .c1 {
+    color: #969896
+}
+
+/* Comment.Single */
+.highlighter-rouge .cs {
+    color: #969896
+}
+
+/* Comment.Special */
+.highlighter-rouge .gd {
+    color: #cc6666
+}
+
+/* Generic.Deleted */
+.highlighter-rouge .ge {
+    font-style: italic
+}
+
+/* Generic.Emph */
+.highlighter-rouge .gh {
+    color: #c5c8c6;
+    font-weight: bold
+}
+
+/* Generic.Heading */
+.highlighter-rouge .gi {
+    color: #b5bd68
+}
+
+/* Generic.Inserted */
+.highlighter-rouge .gp {
+    color: #969896;
+    font-weight: bold
+}
+
+/* Generic.Prompt */
+.highlighter-rouge .gs {
+    font-weight: bold
+}
+
+/* Generic.Strong */
+.highlighter-rouge .gu {
+    color: #8abeb7;
+    font-weight: bold
+}
+
+/* Generic.Subheading */
+.highlighter-rouge .kc {
+    color: #b294bb
+}
+
+/* Keyword.Constant */
+.highlighter-rouge .kd {
+    color: #b294bb
+}
+
+/* Keyword.Declaration */
+.highlighter-rouge .kn {
+    color: #8abeb7
+}
+
+/* Keyword.Namespace */
+.highlighter-rouge .kp {
+    color: #ebebeb
+}
+
+/* Keyword.Pseudo */
+.highlighter-rouge .kr {
+    color: #b294bb
+}
+
+/* Keyword.Reserved */
+.highlighter-rouge .kt {
+    color: #f0c674
+}
+
+/* Keyword.Type */
+.highlighter-rouge .ld {
+    color: #b5bd68
+}
+
+/* Literal.Date */
+.highlighter-rouge .m {
+    color: #de935f
+}
+
+/* Literal.Number */
+.highlighter-rouge .s {
+    color: #b5bd68
+}
+
+/* Literal.String */
+.highlighter-rouge .na {
+    color: #81a2be
+}
+
+/* Name.Attribute */
+.highlighter-rouge .nb {
+    color: #c5c8c6
+}
+
+/* Name.Builtin */
+.highlighter-rouge .nc {
+    color: #f0c674
+}
+
+/* Name.Class */
+.highlighter-rouge .no {
+    color: #e7c547
+}
+
+/* Name.Constant */
+.highlighter-rouge .nd {
+    color: #8abeb7
+}
+
+/* Name.Decorator */
+.highlighter-rouge .ni {
+    color: #c5c8c6
+}
+
+/* Name.Entity */
+.highlighter-rouge .ne {
+    color: #cc6666
+}
+
+/* Name.Exception */
+.highlighter-rouge .nf {
+    color: #81a2be
+}
+
+/* Name.Function */
+.highlighter-rouge .nl {
+    color: #c5c8c6
+}
+
+/* Name.Label */
+.highlighter-rouge .nn {
+    color: #f0c674
+}
+
+/* Name.Namespace */
+.highlighter-rouge .nx {
+    color: #81a2be
+}
+
+/* Name.Other */
+.highlighter-rouge .py {
+    color: #c5c8c6
+}
+
+/* Name.Property */
+.highlighter-rouge .nt {
+    color: #8abeb7
+}
+
+/* Name.Tag */
+.highlighter-rouge .nv {
+    color: #cc6666
+}
+
+/* Name.Variable */
+.highlighter-rouge .ow {
+    color: #8abeb7
+}
+
+/* Operator.Word */
+.highlighter-rouge .w {
+    color: #c5c8c6
+}
+
+/* Text.Whitespace */
+.highlighter-rouge .mf {
+    color: #de935f
+}
+
+/* Literal.Number.Float */
+.highlighter-rouge .mh {
+    color: #de935f
+}
+
+/* Literal.Number.Hex */
+.highlighter-rouge .mi {
+    color: #de935f
+}
+
+/* Literal.Number.Integer */
+.highlighter-rouge .mo {
+    color: #de935f
+}
+
+/* Literal.Number.Oct */
+.highlighter-rouge .sb {
+    color: #b5bd68
+}
+
+/* Literal.String.Backtick */
+.highlighter-rouge .sc {
+    color: #c5c8c6
+}
+
+/* Literal.String.Char */
+.highlighter-rouge .sd {
+    color: #969896
+}
+
+/* Literal.String.Doc */
+.highlighter-rouge .s2 {
+    color: #b5bd68
+}
+
+/* Literal.String.Double */
+.highlighter-rouge .se {
+    color: #de935f
+}
+
+/* Literal.String.Escape */
+.highlighter-rouge .sh {
+    color: #b5bd68
+}
+
+/* Literal.String.Heredoc */
+.highlighter-rouge .si {
+    color: #de935f
+}
+
+/* Literal.String.Interpol */
+.highlighter-rouge .sx {
+    color: #b5bd68
+}
+
+/* Literal.String.Other */
+.highlighter-rouge .sr {
+    color: #b5bd68
+}
+
+/* Literal.String.Regex */
+.highlighter-rouge .s1 {
+    color: #b5bd68
+}
+
+/* Literal.String.Single */
+.highlighter-rouge .ss {
+    color: #de935f
+}
+
+/* Literal.String.Symbol */
+.highlighter-rouge .bp {
+    color: #c5c8c6
+}
+
+/* Name.Builtin.Pseudo */
+.highlighter-rouge .vc {
+    color: #cc6666
+}
+
+/* Name.Variable.Class */
+.highlighter-rouge .vg {
+    color: #cc6666
+}
+
+/* Name.Variable.Global */
+.highlighter-rouge .vi {
+    color: #cc6666
+}
+
+/* Name.Variable.Instance */
+.highlighter-rouge .il {
+    color: #de935f
+}
+
+/* Literal.Number.Integer.Long */

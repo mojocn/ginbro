@@ -1,0 +1,243 @@
+swagger: "2.0"
+info:
+  description: "A GinBro RESTful APIs"
+  version: "1.0.0"
+  title: "GinBro RESTful APIs Application"
+host: "{{.AppListen}}"
+basePath: "/api/v1"
+
+schemes:
+- "http"
+paths:
+  {{range .Tables}}
+  {{if .IsAuthTable}}
+  /login:
+    post:
+      tags:
+      - "auth"
+      summary: "login by {{.ResourceName}}"
+      description: "login by {{.ResourceName}}"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "create {{.ResourceName}}"
+        required: true
+        schema:
+          $ref: "#/definitions/{{.ModelName}}"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/{{.ModelName}}Auth"
+
+  {{end}}
+  /{{.ResourceName}}:
+    get:
+      tags:
+      - "{{.ResourceName}}"
+      summary: "get all {{.ResourceName}} by pagination"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "where"
+        in: "query"
+        description: "column:value will use sql LIKE for search eg:id:67 will where id >67 eg2: name:eric => where name LIKE '%eric%'"
+        required: false
+        type: "array"
+        items:
+          type: "string"
+      - name: "fields"
+        in: "query"
+        description: "{$tableColumn},{$tableColumn}... "
+        required: false
+        type: "string"
+      - name: "order"
+        in: "query"
+        description: "eg: id desc, name desc"
+        required: false
+        type: "string"
+      - name: "offset"
+        in: "query"
+        description: "sql offset eg: 10"
+        required: false
+        type: "integer"
+      - name: "limit"
+        in: "query"
+        default: "2"
+        description: "limit returning object count"
+        required: false
+        type: "integer"
+
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/{{.ModelName}}Pagination"
+    post:
+      tags:
+      - "{{.ResourceName}}"
+      summary: "create {{.ResourceName}}"
+      description: "create {{.ResourceName}}"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "create {{.ResourceName}}"
+        required: true
+        schema:
+          $ref: "#/definitions/{{.ModelName}}"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+
+    patch:
+      tags:
+      - "{{.ResourceName}}"
+      summary: "update {{.ResourceName}}"
+      description: "update {{.ResourceName}}"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "create {{.ResourceName}}"
+        required: true
+        schema:
+          $ref: "#/definitions/{{.ModelName}}"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+
+  /{{.ResourceName}}/{Id}:
+    get:
+      tags:
+      - "{{.ResourceName}}"
+      summary: "get a {{.ResourceName}} by ID"
+      description: "get a {{.ResourceName}} by ID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Id"
+        in: "path"
+        description: "ID of {{.ResourceName}} to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/{{.ModelName}}"
+    delete:
+      tags:
+      - "{{.ResourceName}}"
+      summary: "Destroy a {{.ResourceName}} by ID"
+      description: "delete a {{.ResourceName}} by ID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Id"
+        in: "path"
+        description: "ID of {{.ResourceName}} to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  {{end}}
+
+
+definitions:
+  {{range $table := .Tables}}
+  {{ if $table.IsAuthTable }}
+  {{$table.ModelName}}Auth:
+    type: "object"
+    properties:
+      {{range $row := $table.Columns}}
+      {{$row.ColumnName}}:
+        type: "{{$row.SwaggerType}}"
+        description: "{{$row.ColumnComment}}"
+        format: "{{$row.SwaggerFormat}}"
+        {{end}}
+      token:
+        type: "string"
+        description: "jwt token"
+        format: "string"
+      expire:
+        type: "string"
+        description: "jwt token expire time"
+        format: "date-time"
+      expire_ts:
+        type: "integer"
+        description: "expire timestamp unix"
+        format: "int64"
+  {{end}}
+  {{$table.ModelName}}:
+    type: "object"
+    properties:
+    {{range $row := $table.Columns}}
+      {{$row.ColumnName}}:
+        type: "{{$row.SwaggerType}}"
+        description: "{{$row.ColumnComment}}"
+        format: "{{$row.SwaggerFormat}}"
+      {{end}}
+  {{$table.ModelName}}Pagination:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        description: "json repose code"
+        format: "int32"
+      total:
+        type: "integer"
+        description: "total numbers"
+        format: "int32"
+      offset:
+        type: "integer"
+        description: "offset"
+        format: "int32"
+      limit:
+        type: "integer"
+        description: "limit"
+        format: "int32"
+      list:
+        type: "array"
+        items:
+          $ref: "#/definitions/{{$table.ModelName}}"
+{{end}}
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      msg:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
