@@ -10,8 +10,8 @@ Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one co
 
 ## Demo and Translated Document
 - [中文文档](readme_zh.md)            
-- [Youtube-Video-Demo](https://www.youtube.com/watch?v=TvWQhNKfmCo&feature=youtu.be)
-- [Bilibili-Video-Demo](https://www.bilibili.com/video/av36804258/)
+- [Video-Demo-Youtube](https://www.youtube.com/watch?v=TvWQhNKfmCo&feature=youtu.be)
+- [Video-Demo-Bilibili](https://www.bilibili.com/video/av36804258/)
 
 ## Feature
 - [fastest way to generate a RESTful APIs application with MySQL in Go](/boilerplate)
@@ -22,7 +22,7 @@ Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one co
 - [powered with Swagger document and SwaggerUI](boilerplate/swagger)
 - [capable of serve VueJs app's static files](boilerplate/static)
 - [configurable CORS middleware](boilerplate/handlers/gin_helper.go)
-- [configurable logger](tpl/config.toml)
+- [user friendly configuration](tpl/config.toml)
 - [golang GUI app](gui)
 - [fully build-in cron task support](boilerplate/tasks)
     

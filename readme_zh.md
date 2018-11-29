@@ -1,6 +1,18 @@
 # [MySQL数据库生成RESTful APIs APP](https://github.com/dejavuzhou/ginbro)
+[![Build Status](https://travis-ci.org/dejavuzhou/ginbro.svg?branch=master)](https://travis-ci.org/dejavuzhou/ginbro) 
+[![GoDoc](http://godoc.org/github.com/dejavuzhou/ginbro?status.svg)](http://godoc.org/github.com/dejavuzhou/ginbro) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/dejavuzhou/ginbro)](https://goreportcard.com/report/github.com/dejavuzhou/ginbro)
+![stability-stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)
+[![codebeat badge](https://codebeat.co/badges/650029a5-fcea-4416-925e-277e2f178e96)](https://codebeat.co/projects/github-com-dejavuzhou-ginbro-master)
+[![codecov](https://codecov.io/gh/dejavuzhou/ginbro/branch/master/graph/badge.svg)](https://codecov.io/gh/dejavuzhou/ginbro)
+
 ## 一个命令行工具:快速生成go语言RESTful APIs应用 
-## [Youtube视频演示](https://www.youtube.com/watch?v=TvWQhNKfmCo&feature=youtu.be) [在线DEMO](http://ginbro.mojotv.cn/swagger/)
+## 文档和DEMO
+- [在线DEMO](http://ginbro.mojotv.cn/swagger/)
+- [中文文档](readme_zh.md)            
+- [Video-Demo-Youtube](https://www.youtube.com/watch?v=TvWQhNKfmCo&feature=youtu.be)
+- [Video-Demo-Bilibili](https://www.bilibili.com/video/av36804258/)
+
 ## Feature
 - [生成完善RESTful APIs 应用](/boilerplate)
 - [自动生成完善的Swagger文档](boilerplate/swagger)
@@ -9,7 +21,7 @@
 - [支持登陆防火墙](boilerplate/models/model_users.go)
 - [支持静态资源替代nginx](boilerplate/static)
 - [可配置的跨域cors中间件](boilerplate/handlers/gin_helper.go)
-- [可配置的日志系统](tpl/config.toml)
+- [用户友好的自定义配置](tpl/config.toml)
 - [支持定时任务](boilerplate/tasks)
 - [支持图形工具GUI](gui)
 - [内置高效率的内存数据库](https://github.com/dejavuzhou/ginbro/blob/master/boilerplate/models/db_memory.go)
