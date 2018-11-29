@@ -89,10 +89,10 @@ func (p *ParseEngine) parseConfigYamlReadmeFiles() {
 func (p *ParseEngine) parseTemplateFileChangeImportName() error {
 
 	tasks := map[string]string{
-		"template/tasks.task_example.go.tpl":   "tasks/task_example.go",
-		"template/tasks.manager.go.tpl":        "tasks/manager.go",
-		"template/tasks.core.go.tpl":           "tasks/core.go",
-		"template/tasks.readme.md.tpl":         "tasks/readme.md",
+		"template/tasks.task_example.go.tpl":  "tasks/task_example.go",
+		"template/tasks.manager.go.tpl":       "tasks/manager.go",
+		"template/tasks.core.go.tpl":          "tasks/core.go",
+		"template/tasks.readme.md.tpl":        "tasks/readme.md",
 		"template/main.go.tpl":                "main.go",
 		"template/config.viper.go.tpl":        "config/viper.go",
 		"template/handlers.gin.go.tpl":        "handlers/gin.go",

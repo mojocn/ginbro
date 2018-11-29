@@ -10,7 +10,6 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"time"
 )
 
 func main() {
@@ -29,11 +28,7 @@ func main() {
 	c := &guiFunction{}
 	ui.Bind("mysqlGen", c.MysqlGen)
 
-	i, err := strconv.ParseInt("1405544146", 10, 64)
-	if err != nil {
-		panic(err)
-	}
-	_ := time.Unix(i, 0)
+
 	// Load HTML.
 	// You may also use `data:text/html,<base64>` approach to load initial HTML,
 	// e.g: ui.Load("data:text/html," + url.PathEscape(html))

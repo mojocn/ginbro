@@ -27,3 +27,9 @@
     addr = "" # 127.0.0.1:6379 empty string will not init the redis db in models package
     password = ""
     db_idx = 0
+
+
+# the init config has not impelement yet
+[init]
+    user_email= "admin@ginbro.com" # if not exist, create a user with the bcrypt password, if the value is empty will do nothing
+    user_password = "123123" # print the bcrypted password in console for you to paste into mysql auth_table.password column
