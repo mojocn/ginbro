@@ -40,6 +40,7 @@ func parseParamID(c *gin.Context) (uint, error) {
 }
 
 func enableCorsMiddleware() {
+	//TODO:: customize your own CORS
 	//https://github.com/gin-contrib/cors
 	// CORS for https://foo.com and https://github.com origins, allowing:
 	// - PUT and PATCH methods

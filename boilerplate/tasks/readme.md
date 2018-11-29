@@ -1,0 +1,1 @@
+# add your cron task in `manager.go` and create new task `task_whatever.go`

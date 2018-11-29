@@ -31,6 +31,10 @@ var makeCmd = &cobra.Command{
 	Long:  `Developer Mode:for make your own boilerplate.create template file from boilerplate's models and handlers`,
 	Run: func(cmd *cobra.Command, args []string) {
 		tasks := map[string]string{
+			"tasks/core.go":              "tasks.core.go.tpl",
+			"tasks/manager.go":           "tasks.manager.go.tpl",
+			"tasks/task_example.go":      "tasks.task_example.go.tpl",
+			"tasks/readme.md":            "tasks.readme.md.tpl",
 			"handlers/gin.go":            "handlers.gin.go.tpl",
 			"handlers/gin_helper.go":     "handlers.gin_helper.go.tpl",
 			"handlers/middleware_jwt.go": "handlers.middleware_jwt.go.tpl",

@@ -2,14 +2,18 @@
 ## 一个命令行工具:快速生成go语言RESTful APIs应用 
 ## [Youtube视频演示](https://www.youtube.com/watch?v=TvWQhNKfmCo&feature=youtu.be) [在线DEMO](http://ginbro.mojotv.cn/swagger/)
 ## Feature
-- 自动生成完善的swagger(postman)文档
-- 可以serve SPA应用(比如VueJS全家桶)
-- 快速使用golang+gin+gorm改造依赖mysql项目
-- 自带jwt-auth和auth-middleware
-- auth登陆防火墙
-- 跨域中间件支持
-- log 不同级别日志
-    
+- [生成完善RESTful APIs 应用](/boilerplate)
+- [自动生成完善的Swagger文档](boilerplate/swagger)
+- [自动生成数据库表的模型和标注](boilerplate/models)
+- 支持 [JWT Authorization Bearer](boilerplate/handlers/middleware_jwt.go) [身份验证](boilerplate/handlers/handler_auth.go) and [JWT 中间件](boilerplate/models/jwt.go)
+- [支持登陆防火墙](boilerplate/models/model_users.go)
+- [支持静态资源替代nginx](boilerplate/static)
+- [可配置的跨域cors中间件](boilerplate/handlers/gin_helper.go)
+- [可配置的日志系统](boilerplate/config.toml)
+- [支持定时任务](boilerplate/tasks)
+- [支持图形工具GUI](gui)
+- [内置高效率的内存数据库](https://github.com/dejavuzhou/ginbro/blob/master/boilerplate/models/db_memory.go)
+
 ## ginbro工具安装
 您可以通过如下的方式安装 ginbro 工具：
 ```shell

@@ -14,16 +14,17 @@ Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one co
 - [Bilibili-Video-Demo](https://www.bilibili.com/video/av36804258/)
 
 ## Feature
-- fastest way to generate a RESTful APIs application with MySQL in Go
-- support JWT Authorization Bearer Auth and JWT middleware
-- support brute-force-login firewall
+- [fastest way to generate a RESTful APIs application with MySQL in Go](/boilerplate)
+- support [JWT Authorization Bearer](boilerplate/handlers/middleware_jwt.go) [Auth](boilerplate/handlers/handler_auth.go) and [JWT middleware](boilerplate/models/jwt.go)
+- [support brute-force-login firewall](boilerplate/models/model_users.go)
 - [build in swift golang-memory cache](https://github.com/dejavuzhou/ginbro/blob/master/boilerplate/models/db_memory.go)
-- generate GORM model from MySQL database schema
-- powered with Swagger document and SwaggerUI
-- capable of serve VueJs app's static files
-- configurable CORS middleware
-- configurable logger
-- golang GUI app
+- [generate GORM model from MySQL database schema](boilerplate/models)
+- [powered with Swagger document and SwaggerUI](boilerplate/swagger)
+- [capable of serve VueJs app's static files](boilerplate/static)
+- [configurable CORS middleware](boilerplate/handlers/gin_helper.go)
+- [configurable logger](boilerplate/config.toml)
+- [golang GUI app](gui)
+- [fully build-in cron task support](boilerplate/tasks)
     
 ## Ginbro Installation
 you can install it by `go get` command：

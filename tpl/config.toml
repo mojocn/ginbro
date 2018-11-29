@@ -9,6 +9,7 @@
     enable_cors = true  # true will case 403 error in swaggerUI  may cause api perform decrease
     enable_sql_log = true # show gorm sql in terminal
     enable_https = false # if addr is a domain enable_https will works
+    enable_cron = false # is enable buildin schedule job
     time_zone = "Asia/Shanghai"
     api_prefix = "v1" #  api_prefix could be empty string,            the api uri will be api/v1/resource
     static_path = "./static/"  # path must be an absolute path or relative to the go-build-executable file, may cause api perform decrease

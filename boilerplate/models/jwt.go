@@ -41,7 +41,7 @@ type jwtObj struct {
 //JwtParseUser parse a jwt token and return an authorized identity
 func JwtParseUser(tokenString string) (*AuthorizationModel, error) {
 	if tokenString == "" {
-		return nil, errors.New("no token is found in Authorization Bearer")
+		return nil, errors.New("token is not found in Authorization Bearer")
 	}
 	claims := jwt.StandardClaims{}
 	_, err := jwt.ParseWithClaims(tokenString, &claims, func(token *jwt.Token) (interface{}, error) {
