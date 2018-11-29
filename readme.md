@@ -22,7 +22,7 @@ Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one co
 - [powered with Swagger document and SwaggerUI](boilerplate/swagger)
 - [capable of serve VueJs app's static files](boilerplate/static)
 - [configurable CORS middleware](boilerplate/handlers/gin_helper.go)
-- [configurable logger](boilerplate/config.toml)
+- [configurable logger](tpl/config.toml)
 - [golang GUI app](gui)
 - [fully build-in cron task support](boilerplate/tasks)
     

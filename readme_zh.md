@@ -9,7 +9,7 @@
 - [支持登陆防火墙](boilerplate/models/model_users.go)
 - [支持静态资源替代nginx](boilerplate/static)
 - [可配置的跨域cors中间件](boilerplate/handlers/gin_helper.go)
-- [可配置的日志系统](boilerplate/config.toml)
+- [可配置的日志系统](tpl/config.toml)
 - [支持定时任务](boilerplate/tasks)
 - [支持图形工具GUI](gui)
 - [内置高效率的内存数据库](https://github.com/dejavuzhou/ginbro/blob/master/boilerplate/models/db_memory.go)
