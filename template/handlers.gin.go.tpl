@@ -57,7 +57,7 @@ func ServerRun() {
 		log.Fatal(autotls.Run(r, addr))
 	} else {
 		log.Printf("visit http://%s/swagger for RESTful APIs Document", addr)
-		log.Printf("visit http://%s/static for front-end static html files", addr)
+		log.Printf("visit http://%s/ for front-end static html files", addr)
 		log.Printf("visit http://%s/app/info for app info only on not-prod mode", addr)
 		r.Run(addr)
 	}
