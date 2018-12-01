@@ -25,6 +25,7 @@ Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one co
 - [user friendly configuration](tpl/config.toml)
 - [golang GUI app](gui)
 - [fully build-in cron task support](boilerplate/tasks)
+- [travis CI/CD](https://travis-ci.org/dejavuzhou/ginbro)
     
 ## Ginbro Installation
 you can install it by `go get` command：
