@@ -122,6 +122,7 @@ func (m *AuthorizationModel) Login(ip string) (*jwtObj, error) {
 	key := fmt.Sprintf("login:%d", m.Id)
 	m.Password = ""
 	//save login user  into the memory store
-	mem.Set(key, m)
-	return jwtGenerateToken(m)
+	data ,err := jwtGenerateToken(m)
+	mem.Set(key, data)
+	return data,err
 }
