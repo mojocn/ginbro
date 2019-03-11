@@ -131,11 +131,12 @@ go get github.com/go-sql-driver/mysql
 go get github.com/jinzhu/gorm
 go get github.com/dgrijalva/jwt-go
 ```
-## How to fix `go get golang.org/x/crypto/bcrypt` error
+## How to fix `go get golang.org/x/crypto/bcrypt` and `go get golang.org/x/crypto/text` error
 ```bash
 mkdir -p $GOPATH/src/golang.org/x
 cd $GOPATH/src/golang.org/x
 git clone https://github.com/golang/crypto
+git clone https://github.com/golang/text
 ```
 retry the command`go get github.com/dejavuzhou/ginbro`
 
