@@ -7,6 +7,9 @@
 [![codecov](https://codecov.io/gh/dejavuzhou/ginbro/branch/master/graph/badge.svg)](https://codecov.io/gh/dejavuzhou/ginbro)
 
 Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one command to create a mighty RESTful APIs App.
+## Warning
+### - this Repo's code has transfered to [Felix](https://github.com/dejavuzhou/felix), please visit[dejavuzhou/felix](https://github.com/dejavuzhou/felix)
+### - 代码已经转移到[dejavuzhou/felix](https://github.com/dejavuzhou/felix),请移步至[dejavuzhou/felix](https://github.com/dejavuzhou/felix)
 
 ## Demo and Translated Document
 - [中文文档](readme_zh.md)            
