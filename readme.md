@@ -8,8 +8,8 @@
 
 Ginbro is a scaffold tool for Gin-Gorm-MySQL which you just need to input one command to create a mighty RESTful APIs App.
 ## Warning
-### - this Repo's code has transfered to [Felix](https://github.com/dejavuzhou/felix), please visit[dejavuzhou/felix](https://github.com/dejavuzhou/felix/ginbro)
-### - 代码已经转移到[dejavuzhou/felix](https://github.com/dejavuzhou/felix/ginbro),请移步至[dejavuzhou/felix/ginbro](https://github.com/dejavuzhou/felix)
+### - this Repo's code has transfered to [Felix/ginbro](https://github.com/dejavuzhou/felix), please visit[dejavuzhou/felix](https://github.com/dejavuzhou/felix/ginbro)
+### - 代码已经转移到[dejavuzhou/felix/ginbro](https://github.com/dejavuzhou/felix/ginbro),请移步至[dejavuzhou/felix/ginbro](https://github.com/dejavuzhou/felix)
 
 ## Demo and Translated Document
 - [中文文档](readme_zh.md)            
